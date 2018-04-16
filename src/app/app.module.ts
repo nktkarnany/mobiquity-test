@@ -16,8 +16,11 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 
 import { AngularFireModule } from 'angularfire2';
+import { AuthService } from '../services/auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
+
+import { NgxErrorsModule } from '@ultimate/ngxerrors';
 
 @NgModule({
 	declarations: [
@@ -35,7 +38,8 @@ import { firebaseConfig } from '../config';
 		GoogleMapsModule,
 		HomeModule,
 		SlideBoxModule,
-		WordpressModule
+		WordpressModule,
+        NgxErrorsModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
@@ -45,7 +49,8 @@ import { firebaseConfig } from '../config';
 	providers: [
 		Config,
 		StatusBar,
-        AngularFireAuth
+        AngularFireAuth,
+        AuthService
 	]
 })
 export class AppModule {
