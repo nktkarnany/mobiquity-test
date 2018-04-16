@@ -14,6 +14,7 @@ import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { MyApp } from './app.component';
 
 import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 import { AngularFireModule } from 'angularfire2';
 import { AuthService } from '../services/auth.service';
@@ -25,7 +26,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 @NgModule({
 	declarations: [
 		MyApp,
-        LoginPage
+        LoginPage,
+        SignupPage
 	],
 	imports: [
 		BrowserModule,
@@ -44,7 +46,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp,
-        LoginPage
+        LoginPage,
+        SignupPage
 	],
 	providers: [
 		Config,
