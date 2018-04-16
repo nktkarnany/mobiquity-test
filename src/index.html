@@ -27,6 +27,20 @@
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCuUwHXoa1ds5samVJv1sYlb3NhHQxP5Tc",
+      authDomain: "mobiquity-534ce.firebaseapp.com",
+      databaseURL: "https://mobiquity-534ce.firebaseio.com",
+      projectId: "mobiquity-534ce",
+      storageBucket: "mobiquity-534ce.appspot.com",
+      messagingSenderId: "1047726405202"
+    };
+    firebase.initializeApp(config);
+  </script>
 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>

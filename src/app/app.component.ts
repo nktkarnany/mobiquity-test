@@ -8,6 +8,7 @@ import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 import { HomePage } from '../pages/home/home.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
 	templateUrl: 'app.html'
@@ -35,7 +36,7 @@ export class MyApp {
 			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
 		];
 
-		this.rootPage = HomePage;
+		this.rootPage = LoginPage;
 	}
 
 	initializeApp() {

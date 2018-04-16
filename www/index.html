@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <script data-ionic="inject">
-    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.6.0';i.angular='4.1.3';i.staticDir='build/';})(window);
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.0.1';i.staticDir='build/';})(window);
   </script>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -30,6 +30,20 @@
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCuUwHXoa1ds5samVJv1sYlb3NhHQxP5Tc",
+      authDomain: "mobiquity-534ce.firebaseapp.com",
+      databaseURL: "https://mobiquity-534ce.firebaseio.com",
+      projectId: "mobiquity-534ce",
+      storageBucket: "mobiquity-534ce.appspot.com",
+      messagingSenderId: "1047726405202"
+    };
+    firebase.initializeApp(config);
+  </script>
 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
