@@ -10,6 +10,8 @@ import { Config } from '../config';
 import { ComponentsModule } from '../pages/components/components.module';
 import { HomeModule } from '../pages/home/home.module';
 import { ArticlesPageModule } from '../pages/articles/articles.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
+import { AboutPageModule } from '../pages/about/about.module';
 import { MyApp } from './app.component';
 
 import { LoginPage } from '../pages/login/login';
@@ -39,6 +41,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 		ComponentsModule,
 		HomeModule,
 		ArticlesPageModule,
+        SettingsPageModule,
+        AboutPageModule,
         NgxErrorsModule
 	],
 	bootstrap: [IonicApp],

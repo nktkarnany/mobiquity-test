@@ -6,6 +6,8 @@ import { ComponentsListPage } from '../pages/components/list/components.list.pag
 
 import { HomePage } from '../pages/home/home.page';
 import { ArticlesPage } from '../pages/articles/articles';
+import { SettingsPage } from '../pages/settings/settings';
+import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../services/auth.service';
 
@@ -31,6 +33,8 @@ export class MyApp {
 		this.pages = [
 			{ title: 'Home', component: HomePage, icon: 'home' },
 			{ title: 'Articles', component: ArticlesPage, icon: 'grid' },
+			{ title: 'Settings', component: SettingsPage, icon: 'grid' },
+			{ title: 'About', component: AboutPage, icon: 'grid' },
 			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
 		];
 
