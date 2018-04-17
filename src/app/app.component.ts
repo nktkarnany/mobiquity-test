@@ -6,6 +6,7 @@ import { ComponentsListPage } from '../pages/components/list/components.list.pag
 
 import { HomePage } from '../pages/home/home.page';
 import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
+import { ArticlesPage } from '../pages/articles/articles';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../services/auth.service';
 
@@ -31,6 +32,7 @@ export class MyApp {
 		this.pages = [
 			{ title: 'Home', component: HomePage, icon: 'home' },
 			{ title: 'Wordpress', component: WordpressListPage, icon: 'logo-wordpress' },
+			{ title: 'Articles', component: ArticlesPage, icon: 'grid' },
 			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
 		];
 

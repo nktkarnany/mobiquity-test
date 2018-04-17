@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Articles</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let post of posts">
+		<img *ngIf="!!post.image" src="{{post.image}}"/>
+		<ion-card-content>
+			<h2 class="card-title">{{post.title}}</h2>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
