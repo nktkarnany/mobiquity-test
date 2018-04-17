@@ -11,7 +11,7 @@ import { Tile } from './models/tile.model';
 	providers: []
 })
 export class HomePage {
-	public tiles: Tile[][];
+	public tiles: Tile[];
 
 	private nav: Nav;
 
@@ -24,47 +24,57 @@ export class HomePage {
 	}
 
 	public navigateTo(tile) {
-        this.storage.set('category', tile.path);
-		this.nav.setRoot(tile.component);
+        this.storage.set('category', tile.path).then(() => {
+		  this.nav.setRoot(tile.component);
+        });
 	}
 
 	private initTiles(): void {
-		this.tiles = [[{
+		this.tiles = [{
 			title: 'Sports',
 			path: 'sports',
+            icon: 'football',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Politics',
 			path: 'politics',
+            icon: 'contacts',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Technology',
 			path: 'technology',
+            icon: 'desktop',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Food',
 			path: 'food',
+            icon: 'pizza',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'News',
 			path: 'news',
+            icon: 'information',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Music',
 			path: 'music',
+            icon: 'musical-note',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Funny',
 			path: 'funny',
+            icon: 'happy',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Gaming',
 			path: 'gaming',
+            icon: 'game-controller-b',
 			component: ArticlesPage
-		}], [{
+		}, {
 			title: 'Art',
 			path: 'art',
+            icon: 'clipboard',
 			component: ArticlesPage
-		}]];
+		}];
 	}
 }
