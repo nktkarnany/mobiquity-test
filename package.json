@@ -32,6 +32,7 @@
     "@types/lodash": "4.14.55",
     "@ultimate/ngxerrors": "^1.4.0",
     "angularfire2": "^5.0.0-rc.6.0",
+    "cordova-sqlite-storage": "^2.3.0",
     "es6-promise": "3.0.2",
     "es6-shim": "^0.35.0",
     "firebase": "^4.12.1",
@@ -57,7 +58,8 @@
       "cordova-plugin-console": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "cordova-sqlite-storage": {}
     },
     "platforms": [
       "ios",

@@ -13,8 +13,8 @@ export class ArticlesService {
 		private config: Config
 	) {}
 
-	public getPosts(): Observable<Post[]> {
-		return this.http.get(this.config.redditApiUrl)
+	public getPosts(val): Observable<Post[]> {
+		return this.http.get(this.config.redditApiUrl + val + "/top.json?limit=2")
 			.map(x => x.json())
 			.map(response => {
 				this.articles = response.data.children.map((item: any) => this.createArticle(item));
@@ -23,8 +23,12 @@ export class ArticlesService {
 	}
 
 	private createArticle(item): Post {
-    
-        let imageUrl = item.data.preview.images.length > 0 ? item.data.preview.images[0].source.url : null;
+        
+        let imageUrl = null;
+        
+        if (item.data.hasOwnProperty('preview')) {
+            imageUrl = item.data.preview.images.length > 0 ? item.data.preview.images[0].source.url : null;
+        }
     
 		return {
 			id: item.data.id,

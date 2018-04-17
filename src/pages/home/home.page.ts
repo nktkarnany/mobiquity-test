@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Nav } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 import { ArticlesPage } from '../articles/articles';
 
@@ -15,24 +16,54 @@ export class HomePage {
 	private nav: Nav;
 
 	constructor(
-		nav: Nav
+		nav: Nav,
+        public storage: Storage
 	) {
 		this.nav = nav;
 		this.initTiles();
 	}
 
 	public navigateTo(tile) {
+        this.storage.set('category', tile.path);
 		this.nav.setRoot(tile.component);
 	}
 
 	private initTiles(): void {
 		this.tiles = [[{
-			title: 'Articles',
-			path: 'articles',
+			title: 'Sports',
+			path: 'sports',
 			component: ArticlesPage
 		}], [{
-			title: 'Articles',
-			path: 'articles',
+			title: 'Politics',
+			path: 'politics',
+			component: ArticlesPage
+		}], [{
+			title: 'Technology',
+			path: 'technology',
+			component: ArticlesPage
+		}], [{
+			title: 'Food',
+			path: 'food',
+			component: ArticlesPage
+		}], [{
+			title: 'News',
+			path: 'news',
+			component: ArticlesPage
+		}], [{
+			title: 'Music',
+			path: 'music',
+			component: ArticlesPage
+		}], [{
+			title: 'Funny',
+			path: 'funny',
+			component: ArticlesPage
+		}], [{
+			title: 'Gaming',
+			path: 'gaming',
+			component: ArticlesPage
+		}], [{
+			title: 'Art',
+			path: 'art',
 			component: ArticlesPage
 		}]];
 	}

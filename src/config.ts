@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Config {
-	public redditApiUrl = 'https://www.reddit.com/r/sports/top.json?limit=2';
+	public redditApiUrl = 'https://www.reddit.com/r/';
 }
 
 export const firebaseConfig = {

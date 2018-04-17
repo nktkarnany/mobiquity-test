@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 import { Config } from '../config';
 
 import { ComponentsModule } from '../pages/components/components.module';
@@ -31,6 +32,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 		BrowserModule,
 		HttpModule,
 		IonicModule.forRoot(MyApp),
+        IonicStorageModule.forRoot(),
 		AgmCoreModule.forRoot(),
 
         AngularFireModule.initializeApp(firebaseConfig.fire),
