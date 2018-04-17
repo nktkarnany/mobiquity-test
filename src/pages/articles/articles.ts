@@ -12,6 +12,7 @@ import { Storage } from '@ionic/storage';
 export class ArticlesPage implements OnInit {
 	public posts: Post[];
     public category;
+    public limit;
 	private loading;
 
 	constructor(
@@ -25,13 +26,24 @@ export class ArticlesPage implements OnInit {
 	}
 
 	ngOnInit(): void {
-        this.storage.get('category').then((val) => {
-            this.category = val;
-            this.articlesService.getPosts(val)
+        
+        Promise.all([this.storage.get('category'), this.storage.get('limit')]).then(values => {
+
+            if (values[0])
+                this.category = values[0];
+            else
+                this.category = 'sports';
+            if (values[1])
+                this.limit = values[1];
+            else
+                this.limit = 5;
+
+            this.articlesService.getPosts(this.category, this.limit)
                 .subscribe(posts => {
                     this.posts = posts;
                     this.loading.dismiss();
                 });
+
         });
 	}
 }

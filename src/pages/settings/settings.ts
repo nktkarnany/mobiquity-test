@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ArticlesPage } from '../articles/articles';
 
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  limit: number;
+
+  constructor(
+      public navCtrl: NavController,
+      public navParams: NavParams,
+      private storage: Storage
+  ) {
+      this.storage.get('limit').then((val) => {
+          if (val)
+              this.limit = val;
+      });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+  saveLimit(){
+      this.storage.set('limit', this.limit);
+      this.navCtrl.setRoot(ArticlesPage);
   }
 
 }

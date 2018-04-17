@@ -13,8 +13,8 @@ export class ArticlesService {
 		private config: Config
 	) {}
 
-	public getPosts(val): Observable<Post[]> {
-		return this.http.get(this.config.redditApiUrl + val + "/top.json?limit=2")
+	public getPosts(category, limit): Observable<Post[]> {
+		return this.http.get(this.config.redditApiUrl + category + "/top.json?limit=" + limit)
 			.map(x => x.json())
 			.map(response => {
 				this.articles = response.data.children.map((item: any) => this.createArticle(item));
