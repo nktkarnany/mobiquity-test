@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Nav } from 'ionic-angular';
 
-import { WordpressListPage } from '../wordpress/list/wordpress.list.page';
+import { ArticlesPage } from '../articles/articles';
 
 import { Tile } from './models/tile.model';
 
@@ -27,10 +27,13 @@ export class HomePage {
 
 	private initTiles(): void {
 		this.tiles = [[{
-			title: 'Wordpress',
-			path: 'wordpress-articles',
-			icon: 'logo-wordpress',
-			component: WordpressListPage
+			title: 'Articles',
+			path: 'articles',
+			component: ArticlesPage
+		}], [{
+			title: 'Articles',
+			path: 'articles',
+			component: ArticlesPage
 		}]];
 	}
 }

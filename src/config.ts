@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Config {
-	public wordpressApiUrl = 'http://demo.titaniumtemplates.com/wordpress/?json=1';
 	public redditApiUrl = 'https://www.reddit.com/r/sports/top.json?limit=2';
 }
 

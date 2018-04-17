@@ -8,7 +8,6 @@ import { Config } from '../config';
 
 import { ComponentsModule } from '../pages/components/components.module';
 import { HomeModule } from '../pages/home/home.module';
-import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { ArticlesPageModule } from '../pages/articles/articles.module';
 import { MyApp } from './app.component';
 
@@ -37,7 +36,6 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
         AngularFireModule.initializeApp(firebaseConfig.fire),
 		ComponentsModule,
 		HomeModule,
-		WordpressModule,
 		ArticlesPageModule,
         NgxErrorsModule
 	],
