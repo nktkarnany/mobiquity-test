@@ -11,6 +11,7 @@ import { Storage } from '@ionic/storage';
 })
 export class ArticlesPage implements OnInit {
 	public posts: Post[];
+    public category;
 	private loading;
 
 	constructor(
@@ -25,6 +26,7 @@ export class ArticlesPage implements OnInit {
 
 	ngOnInit(): void {
         this.storage.get('category').then((val) => {
+            this.category = val;
             this.articlesService.getPosts(val)
                 .subscribe(posts => {
                     this.posts = posts;
