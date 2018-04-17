@@ -31,9 +31,9 @@ export class MyApp {
 		// set our app's pages
 		this.pages = [
 			{ title: 'Home', component: HomePage, icon: 'home' },
-			{ title: 'Articles', component: ArticlesPage, icon: 'grid' },
-			{ title: 'Settings', component: SettingsPage, icon: 'grid' },
-			{ title: 'About', component: AboutPage, icon: 'grid' }
+			{ title: 'Articles', component: ArticlesPage, icon: 'list' },
+			{ title: 'Settings', component: SettingsPage, icon: 'settings' },
+			{ title: 'About', component: AboutPage, icon: 'information-circle' }
 		];
 
 		this.rootPage = LoginPage;
