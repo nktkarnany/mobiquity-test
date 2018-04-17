@@ -7,7 +7,6 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { Config } from '../config';
 
-import { ComponentsModule } from '../pages/components/components.module';
 import { HomeModule } from '../pages/home/home.module';
 import { ArticlesPageModule } from '../pages/articles/articles.module';
 import { SettingsPageModule } from '../pages/settings/settings.module';
@@ -38,7 +37,6 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 		AgmCoreModule.forRoot(),
 
         AngularFireModule.initializeApp(firebaseConfig.fire),
-		ComponentsModule,
 		HomeModule,
 		ArticlesPageModule,
         SettingsPageModule,

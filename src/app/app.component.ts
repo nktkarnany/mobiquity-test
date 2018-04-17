@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { App, MenuController, Nav, Platform } from 'ionic-angular';
-import { ComponentsListPage } from '../pages/components/list/components.list.page';
 
 import { HomePage } from '../pages/home/home.page';
 import { ArticlesPage } from '../pages/articles/articles';
@@ -34,8 +33,7 @@ export class MyApp {
 			{ title: 'Home', component: HomePage, icon: 'home' },
 			{ title: 'Articles', component: ArticlesPage, icon: 'grid' },
 			{ title: 'Settings', component: SettingsPage, icon: 'grid' },
-			{ title: 'About', component: AboutPage, icon: 'grid' },
-			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
+			{ title: 'About', component: AboutPage, icon: 'grid' }
 		];
 
 		this.rootPage = LoginPage;
