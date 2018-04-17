@@ -7,9 +7,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { Config } from '../config';
 
 import { ComponentsModule } from '../pages/components/components.module';
-import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { HomeModule } from '../pages/home/home.module';
-import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { MyApp } from './app.component';
 
@@ -37,9 +35,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 
         AngularFireModule.initializeApp(firebaseConfig.fire),
 		ComponentsModule,
-		GoogleMapsModule,
 		HomeModule,
-		SlideBoxModule,
 		WordpressModule,
         NgxErrorsModule
 	],
