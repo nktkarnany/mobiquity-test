@@ -21,6 +21,8 @@ use `ionic serve` to just run the app for a browser preview
 
 * [Ionic Framework](http://ionicframework.com/)
 * [Ionic 2.0](http://ionic.io/2)
+* [Firebase](https://firebase.google.com/)
+* [Reddit](https://www.reddit.com/)
 
 ## Third Party Licenses
 * [Apache License](http://www.apache.org/licenses/)
