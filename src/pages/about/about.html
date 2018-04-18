@@ -10,12 +10,22 @@
 
 <ion-content padding>
 
-  <ion-list class="tile" inset>
-    <ion-item>1. The tabs are placed in the menu bar. Swipe screed from left edge to open the menu bar.</ion-item>
-    <ion-item>2. Menu bar consists of four tabs - home, articles, settings and about.</ion-item>
-    <ion-item>3. Home tab is the list of categories for which the news is to be fed. Selecting any one of it saves it in the local storage and displays the articles for that particular category.</ion-item>
-    <ion-item>4. Articles tab displays the list of articles fetched from the reddit api using the category and limit provided by the you.</ion-item>
-    <ion-item>5. Settings tab allows you set the limit of articles to be fetched.</ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      How I Work -
+    </ion-card-header>
+
+    <ion-list class="tile">
+      <ion-item text-wrap>1. The tabs are placed in the menu bar. Swipe screen from left edge to open the menu bar.</ion-item>
+
+      <ion-item text-wrap>2. Menu bar consists of four tabs - home, articles, settings and about.</ion-item>
+
+      <ion-item text-wrap>3. Home tab is the list of categories for which the news is to be fetched. Clicking on any one of it saves it in the local storage and displays the articles for that particular category.</ion-item>
+
+      <ion-item text-wrap>4. Articles tab displays the fetched articles from the reddit api. While making the api call it uses the category and limit saved in the local storage.</ion-item>
+
+      <ion-item text-wrap>5. Settings tab allows you set the limit for number of articles to be fetched.</ion-item>
+    </ion-list>
+  </ion-card>
 
 </ion-content>
