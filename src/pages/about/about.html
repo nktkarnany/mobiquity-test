@@ -1,13 +1,21 @@
 <ion-header>
-	<ion-navbar>
-		<button ion-button menuToggle>
+  <ion-navbar>
+    <button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
-		<ion-title>About</ion-title>
-	</ion-navbar>
+    <ion-title>About</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list class="tile" inset>
+    <ion-item>1. The tabs are placed in the menu bar. Swipe screed from left edge to open the menu bar.</ion-item>
+    <ion-item>2. Menu bar consists of four tabs - home, articles, settings and about.</ion-item>
+    <ion-item>3. Home tab is the list of categories for which the news is to be fed. Selecting any one of it saves it in the local storage and displays the articles for that particular category.</ion-item>
+    <ion-item>4. Articles tab displays the list of articles fetched from the reddit api using the category and limit provided by the you.</ion-item>
+    <ion-item>5. Settings tab allows you set the limit of articles to be fetched.</ion-item>
+  </ion-list>
 
 </ion-content>
