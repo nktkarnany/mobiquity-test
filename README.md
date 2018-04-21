@@ -12,7 +12,7 @@ $ sudo npm install -g ionic
 Run `npm install` to install all needed dependencies.
 
 ### Install plugins and platforms from package.json
-Run `ionic state restore` to install all Cordova plugins and platforms included in the package.json.
+Run `cordova prepare` to install all Cordova plugins and platforms included in the package.json.
 
 ### Run the app
 use `ionic serve` to just run the app for a browser preview
@@ -20,7 +20,7 @@ use `ionic serve` to just run the app for a browser preview
 ## Credits
 
 * [Ionic Framework](http://ionicframework.com/)
-* [Ionic 2.0](http://ionic.io/2)
+* [Ionic 3.0](http://ionic.io/)
 * [Firebase](https://firebase.google.com/)
 * [Reddit](https://www.reddit.com/)
 
